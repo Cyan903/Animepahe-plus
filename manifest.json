@@ -1,0 +1,54 @@
+{
+    "description": "Additional features for animepahe.",
+    "manifest_version": 2,
+    "name": "Animepahe Plus",
+    "version": "1.0",
+    "homepage_url": "https://example.com",
+    "icons": {
+        "48": "icons/ico.png"
+    },
+
+    "permissions": ["activeTab", "storage", "*://graphql.anilist.co/*"],
+
+    "browser_action": {
+        "default_icon": "icons/dark-32.png",
+        "theme_icons": [
+            {
+                "light": "icons/light-32.png",
+                "dark": "icons/dark-32.png",
+                "size": 32
+            }
+        ],
+        "default_title": "Animepahe+",
+        "default_popup": "settings/conf.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.animepahe.com/anime/*",
+                "*://*.animepahe.org/anime/*",
+                "*://*.animepahe.ru/anime/*"
+            ],
+
+            "run_at": "document_idle",
+            "js": [
+                "pages/index.js",
+                "pages/info/blur.js",
+                "pages/info/episode.js"
+            ]
+        }
+    ],
+
+    "options_ui": {
+        "page": "settings/conf.html",
+        "open_in_tab": true
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "pahe-plus@hwk",
+            "strict_min_version": "57.0a1"
+        }
+    }
+}

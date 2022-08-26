@@ -1,0 +1,15 @@
+{
+    "name": "pahe-plus",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "web-ext run",
+        "pretty": "prettier . --write"
+    },
+    "author": "",
+    "license": "",
+    "devDependencies": {
+        "prettier": "^2.7.1",
+        "web-ext": "^7.2.0"
+    }
+}
