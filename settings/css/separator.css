@@ -1,0 +1,22 @@
+/* https://stackoverflow.com/a/26634224 */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #fff;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 0.25em;
+}

@@ -1,0 +1,34 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    max-width: 500px;
+    padding: 1em;
+}
+
+::selection {
+    color: #eee;
+    background: #d5015b;
+}
+
+.logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.conf-outer {
+    margin-bottom: 20px;
+}
+
+.homepage {
+    color: rgb(133, 133, 133);
+    float: right;
+    font-size: 0.6em;
+    text-decoration: none;
+}
+
+.homepage:hover {
+    color: #eee;
+}

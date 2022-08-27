@@ -5,20 +5,13 @@
     "version": "1.0",
     "homepage_url": "https://example.com",
     "icons": {
-        "48": "icons/ico.png"
+        "48": "icons/dark-48.png"
     },
 
     "permissions": ["activeTab", "storage", "*://graphql.anilist.co/*"],
 
     "browser_action": {
         "default_icon": "icons/dark-32.png",
-        "theme_icons": [
-            {
-                "light": "icons/light-32.png",
-                "dark": "icons/dark-32.png",
-                "size": 32
-            }
-        ],
         "default_title": "Animepahe+",
         "default_popup": "settings/conf.html"
     },
@@ -26,7 +19,8 @@
     "web_accessible_resources": [
         "style/pages/*.css",
         "style/main.css",
-        "img/*.svg"
+        "img/*.svg",
+        "img/*.png"
     ],
 
     "content_scripts": [
