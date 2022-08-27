@@ -55,7 +55,6 @@
             "run_at": "document_idle",
             "css": ["style/pages/info.css"],
             "js": [
-                "pages/index.js",
                 "pages/info/blur.js",
                 "pages/info/episode.js",
                 "pages/info/score.js"
@@ -72,7 +71,6 @@
             "run_at": "document_idle",
             "css": ["style/pages/watch.css"],
             "js": [
-                "pages/index.js",
                 "pages/watch/number.js",
                 "pages/watch/bookmark.js"
             ]
