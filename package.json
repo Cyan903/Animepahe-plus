@@ -1,13 +1,13 @@
 {
     "name": "pahe-plus",
     "version": "1.0.0",
-    "description": "",
+    "description": "Additional features for animepahe.",
     "scripts": {
         "start": "web-ext run",
         "pretty": "prettier . --write"
     },
-    "author": "",
-    "license": "",
+    "author": "Cyan903",
+    "license": "MIT",
     "devDependencies": {
         "prettier": "^2.7.1",
         "web-ext": "^7.2.0"
