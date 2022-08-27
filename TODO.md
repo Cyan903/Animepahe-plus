@@ -2,19 +2,19 @@
 
 -   [x] Countdown latest episode
 -   [x] Blur episode cover
--   [ ] Average score (on anilist)
-
-### /play/\*
-
--   [ ] Show actual episode number
--   [ ] Toggle lights
--   [ ] Select highest quality by default
--   [x] Custom bookmark for episodes
--   [x] Prefer dub
+-   [x] Average score (on anilist)
 
 ### /anime
 
 -   [ ] Filter input search bar
+
+### /play/\*
+
+-   [x] Show actual episode number
+-   [ ] Toggle lights
+-   [ ] Select highest quality by default
+-   [x] Custom bookmark for episodes
+-   [ ] Prefer dub
 
 ### General
 

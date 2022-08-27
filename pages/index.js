@@ -7,6 +7,7 @@ const endpoints = {
 };
 
 const conf = {
+    "anilist-score": false,
     "blur-cover": false,
     "show-upcoming": false,
 

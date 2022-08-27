@@ -53,7 +53,8 @@
             "js": [
                 "pages/index.js",
                 "pages/info/blur.js",
-                "pages/info/episode.js"
+                "pages/info/episode.js",
+                "pages/info/score.js"
             ]
         },
 

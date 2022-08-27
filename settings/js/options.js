@@ -1,5 +1,6 @@
 const conf = document.querySelectorAll(".conf");
 const config = {
+    "anilist-score": false,
     "blur-cover": false,
     "show-upcoming": false,
 
