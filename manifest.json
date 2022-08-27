@@ -38,7 +38,11 @@
             ],
 
             "run_at": "document_idle",
-            "css": ["style/main.css"]
+            "css": ["style/main.css"],
+            "js": [
+                "pages/index.js",
+                "pages/general/random.js"
+            ]
         },
 
         {

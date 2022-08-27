@@ -4,10 +4,6 @@
 -   [x] Blur episode cover
 -   [x] Average score (on anilist)
 
-### /anime
-
--   [ ] Filter input search bar
-
 ### /play/\*
 
 -   [x] Show actual episode number
@@ -19,7 +15,7 @@
 ### General
 
 -   [ ] Disable "Beware of fake websites"
--   [ ] Random anime button (?)
+-   [x] Random anime button
 
 ### Debug
 
@@ -31,3 +27,4 @@
 ### Unsure
 
 -   [ ] Watch history - wouldn't be very useful because of episode bookmarks
+-   [ ] Filter input search bar - sitewide search already exists (?)

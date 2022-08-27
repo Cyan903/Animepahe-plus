@@ -13,6 +13,8 @@ const conf = {
 
     "episode-bookmark": false,
     "season-number": false,
+
+    "random-anime": false,
 };
 
 (async () => {
