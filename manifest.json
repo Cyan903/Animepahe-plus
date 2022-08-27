@@ -23,7 +23,24 @@
         "default_popup": "settings/conf.html"
     },
 
+    "web_accessible_resources": [
+        "style/pages/*.css",
+        "style/main.css",
+        "img/*.svg"
+    ],
+
     "content_scripts": [
+        {
+            "matches": [
+                "*://*.animepahe.com/*",
+                "*://*.animepahe.org/*",
+                "*://*.animepahe.ru/*"
+            ],
+
+            "run_at": "document_idle",
+            "css": ["style/main.css"]
+        },
+
         {
             "matches": [
                 "*://*.animepahe.com/anime/*",
@@ -32,11 +49,39 @@
             ],
 
             "run_at": "document_idle",
+            "css": ["style/pages/info.css"],
             "js": [
                 "pages/index.js",
                 "pages/info/blur.js",
                 "pages/info/episode.js"
             ]
+        },
+
+        {
+            "matches": [
+                "*://*.animepahe.com/play/*",
+                "*://*.animepahe.org/play/*",
+                "*://*.animepahe.ru/play/*"
+            ],
+
+            "run_at": "document_idle",
+            "css": ["style/pages/watch.css"],
+            "js": [
+                "pages/index.js",
+                "pages/watch/number.js",
+                "pages/watch/bookmark.js"
+            ]
+        },
+
+        {
+            "matches": [
+                "*://*.animepahe.com/b/*",
+                "*://*.animepahe.org/b/*",
+                "*://*.animepahe.ru/b/*"
+            ],
+
+            "run_at": "document_idle",
+            "js": ["pages/bookmark/_.js"]
         }
     ],
 

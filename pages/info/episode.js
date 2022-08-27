@@ -18,8 +18,8 @@ function sdhms(sec) {
     const seconds = parseInt(sec);
 
     return (
-        `${Math.floor(seconds / (3600 * 24))}d, ` +
-        `${Math.floor((seconds % (3600 * 24)) / 3600)}h, ` +
+        `${Math.floor(seconds / (3600 * 24))}d ` +
+        `${Math.floor((seconds % (3600 * 24)) / 3600)}h ` +
         `${Math.floor((seconds % 3600) / 60)}m`
     );
 }
@@ -43,9 +43,13 @@ async function getAiringStatus(id) {
         },
 
         body: JSON.stringify({ query }),
-    }).then((res) => res.json());
+    })
+        .then((res) => res.json())
+        .catch((e) => {
+            console.warn(`[pahe-plus] could not fetch ${endpoints.info}!`, e);
+        });
 
-    if (req.errors) {
+    if (!req || req.errors) {
         return false;
     }
 
@@ -61,8 +65,8 @@ function display(stat) {
     // prettier-ignore
     info.insertAdjacentHTML("afterbegin", `
         <p title="${exactDate}">
-            <strong>Next episode: </strong>
-            ${exactDate.toISOString().split("T")[0]} - (${sdhms(stat.timeUntilAiring)})
+            <strong>Next Episode: </strong>
+            ${exactDate.toISOString().split("T")[0]} | ${sdhms(stat.timeUntilAiring)}
         </p>
     `);
 }

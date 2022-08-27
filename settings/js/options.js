@@ -2,6 +2,9 @@ const conf = document.querySelectorAll(".conf");
 const config = {
     "blur-cover": false,
     "show-upcoming": false,
+
+    "episode-bookmark": false,
+    "season-number": false,
 };
 
 conf.forEach((elm) => {
