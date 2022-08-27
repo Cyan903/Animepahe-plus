@@ -6,8 +6,10 @@ const config = {
 
     "episode-bookmark": false,
     "season-number": false,
+    "highest-resolution": false,
 
     "random-anime": false,
+    "fakesite-ignore": false,
 };
 
 conf.forEach((elm) => {

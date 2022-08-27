@@ -8,13 +8,12 @@
 
 -   [x] Show actual episode number
 -   [ ] Toggle lights
--   [ ] Select highest quality by default
+-   [x] Select highest quality by default (sub only)
 -   [x] Custom bookmark for episodes
--   [ ] Prefer dub
 
 ### General
 
--   [ ] Disable "Beware of fake websites"
+-   [x] Disable "Beware of fake websites"
 -   [x] Random anime button
 
 ### Debug

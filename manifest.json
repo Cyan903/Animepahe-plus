@@ -41,7 +41,8 @@
             "css": ["style/main.css"],
             "js": [
                 "pages/index.js",
-                "pages/general/random.js"
+                "pages/general/random.js",
+                "pages/general/fakesite.js"
             ]
         },
 
@@ -72,7 +73,8 @@
             "css": ["style/pages/watch.css"],
             "js": [
                 "pages/watch/number.js",
-                "pages/watch/bookmark.js"
+                "pages/watch/bookmark.js",
+                "pages/watch/resolution.js"
             ]
         },
 
