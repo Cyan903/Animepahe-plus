@@ -37,7 +37,9 @@ function initSave() {
             "afterbegin",
             `
             <li>
-                <a href="${obj.url}" title="${clean(obj.name)}">${shorten(clean(obj.name))}</a>
+                <a href="${obj.url}" title="${clean(obj.name)}">${shorten(
+                clean(obj.name)
+            )}</a>
                 <button class="saved-remove">X</button>
             </li>
         `

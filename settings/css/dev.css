@@ -1,0 +1,29 @@
+.debug {
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: #d5015b;
+    font-weight: bolder;
+}
+
+.debug:before {
+    content: ">>> ";
+}
+
+.debug:hover {
+    text-decoration: underline;
+}
+
+.debug:active {
+    opacity: 0.5;
+}
+
+#debug-console {
+    background-color: #111;
+    padding: 1em;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    overflow: scroll;
+    max-width: 350px;
+    max-height: 200px;
+}

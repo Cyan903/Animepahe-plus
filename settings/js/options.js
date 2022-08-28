@@ -26,7 +26,7 @@ conf.forEach((elm) => {
         config.settings[this.name] = !config.settings[this.name];
 
         browser.storage.sync.set(config);
-        browser.tabs.reload({ bypassCache: true }); // TODO: this will break with options_ui
+        browser.tabs.reload({ bypassCache: true });
         await respond();
     });
 });

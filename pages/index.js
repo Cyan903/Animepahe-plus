@@ -28,13 +28,6 @@ const conf = {
     saved: [],
 };
 
-// ensure sync.saved is stored throughout tabs
-browser.storage.sync.onChanged.addListener((data) => {
-    if (document.hidden) {
-        location.reload();
-    }
-});
-
 (async () => {
     // load storage
     const settings = await browser.storage.sync.get("settings");

@@ -35,6 +35,7 @@
             "css": ["style/main.css"],
             "js": [
                 "pages/index.js",
+                "pages/browser.js",
                 "pages/general/random.js",
                 "pages/general/fakesite.js"
             ]

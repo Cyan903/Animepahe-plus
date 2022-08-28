@@ -19,7 +19,7 @@
 
 ### Debug
 
--   [ ] Wipe all local data (cookie, localStorage)
+-   [x] Wipe all local data (cookie, localStorage)
 -   [x] Reset settings to default
 
 ---

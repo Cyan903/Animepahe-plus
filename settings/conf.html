@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/dev.css" />
         <link rel="stylesheet" href="css/popup.css" />
         <link rel="stylesheet" href="css/page.css" />
         <link rel="stylesheet" href="css/settings.css" />
@@ -41,7 +42,7 @@
                 </div>
                 <div>
                     <input type="checkbox" class="conf" name="blur-cover" />
-                    <label>Blur title cover?</label>
+                    <label>Blur title cover? (spoilers)</label>
                 </div>
                 <div>
                     <input type="checkbox" class="conf" name="show-upcoming" />
@@ -85,8 +86,14 @@
 
         <div class="page p-debug" style="display: none">
             <div class="separator">Debug</div>
-            <button class="debug" id="clear">Clear storage</button>
-            <pre id="debug-console">...</pre>
+            <div>
+                <button class="debug" id="clear">Clear storage</button>
+                <button class="debug" id="cookieMonster">Wipe session</button>
+                <button class="debug" id="viewStorage">
+                    View sync storage
+                </button>
+            </div>
+            <pre id="debug-console" style="visibility: hidden;">...</pre>
         </div>
 
         <div class="page-buttons">
