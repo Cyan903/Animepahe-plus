@@ -70,6 +70,7 @@
                 "pages/watch/number.js",
                 "pages/watch/bookmark.js",
                 "pages/watch/resolution.js",
+                "pages/watch/lights.js",
                 "pages/watch/saved.js"
             ]
         },

@@ -18,6 +18,7 @@ const conf = {
         "season-number": false,
         "highest-resolution": false,
         "save-episode": false,
+        "toggle-lights": false,
 
         // general
         "random-anime": false,

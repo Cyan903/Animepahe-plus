@@ -25,9 +25,12 @@ function takeABite() {
 function viewStorage() {
     const dc = document.getElementById("debug-console");
 
-    dc.style.visibility = dc.style.visibility == "visible" ? "hidden" : "visible";
+    dc.style.visibility =
+        dc.style.visibility == "visible" ? "hidden" : "visible";
     this.innerText =
-        dc.style.visibility == "visible" ? "Hide sync storage" : "View sync storage";
+        dc.style.visibility == "visible"
+            ? "Hide sync storage"
+            : "View sync storage";
 }
 
 clear.addEventListener("click", clearStorage);
