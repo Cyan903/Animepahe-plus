@@ -1,0 +1,27 @@
+.page {
+    margin: auto;
+    min-width: 400px;
+}
+
+.page-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.page-button {
+    width: calc(100% / 3 - 5px);
+    padding: 5px 0;
+    color: #d5015b;
+    background-color: transparent;
+    border: 1px solid #d5015b;
+}
+
+.page-button:hover {
+    background-color: #d5015b;
+    color: #000;
+}
+
+.page-active {
+    font-weight: bolder;
+}

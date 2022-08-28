@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: "Segoe UI", Arial, sans-serif;
     max-width: 500px;
+    max-height: 450px;
     padding: 1em;
 }
 
@@ -16,10 +17,6 @@ body {
     width: 150px;
     height: 150px;
     margin: auto;
-}
-
-.conf-outer {
-    margin-bottom: 20px;
 }
 
 .homepage {

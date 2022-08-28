@@ -3,58 +3,102 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/popup.css" />
+        <link rel="stylesheet" href="css/page.css" />
+        <link rel="stylesheet" href="css/settings.css" />
         <link rel="stylesheet" href="css/separator.css" />
 
         <script src="js/options.js" defer></script>
+        <script src="js/page.js" defer></script>
+        <script src="js/dev.js" defer></script>
+        <script src="js/saved.js" defer></script>
     </head>
 
     <body>
         <img src="../img/logo-big.png" class="logo" />
-        <div class="separator">General</div>
-        <div class="conf-outer">
-            <div>
-                <input type="checkbox" class="conf" name="random-anime" />
-                <label>Random anime navbar button</label>
+
+        <div class="page p-settings">
+            <div class="separator">General</div>
+            <div class="conf-outer">
+                <div>
+                    <input type="checkbox" class="conf" name="random-anime" />
+                    <label>Random anime navbar button</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        class="conf"
+                        name="fakesite-ignore"
+                    />
+                    <label>Hide/ignore the "Beware of fake websites"</label>
+                </div>
             </div>
-            <div>
-                <input type="checkbox" class="conf" name="fakesite-ignore" />
-                <label>Hide/ignore the "Beware of fake websites" message</label>
+
+            <div class="separator">Info</div>
+            <div class="conf-outer">
+                <div>
+                    <input type="checkbox" class="conf" name="anilist-score" />
+                    <label>Show Anilist average score?</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="conf" name="blur-cover" />
+                    <label>Blur title cover?</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="conf" name="show-upcoming" />
+                    <label>Show upcoming episodes?</label>
+                </div>
+            </div>
+
+            <div class="separator">Watching</div>
+            <div class="conf-outer">
+                <div>
+                    <input
+                        type="checkbox"
+                        class="conf"
+                        name="episode-bookmark"
+                    />
+                    <label>Custom bookmarks for episodes</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="conf" name="season-number" />
+                    <label>Episode number based on season</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        class="conf"
+                        name="highest-resolution"
+                    />
+                    <label>Automatically select highest resolution?</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="conf" name="save-episode" />
+                    <label>Show save button for saving episodes?</label>
+                </div>
             </div>
         </div>
 
-        <div class="separator">Info</div>
-        <div class="conf-outer">
-            <div>
-                <input type="checkbox" class="conf" name="anilist-score" />
-                <label>Show Anilist average score?</label>
-            </div>
-            <div>
-                <input type="checkbox" class="conf" name="blur-cover" />
-                <label>Blur title cover?</label>
-            </div>
-            <div>
-                <input type="checkbox" class="conf" name="show-upcoming" />
-                <label>Show upcoming episodes?</label>
-            </div>
+        <div class="page p-saved" style="display: none">
+            <div class="separator">Saved</div>
+            <ol class="saved-items"></ol>
         </div>
 
-        <div class="separator">Watching</div>
-        <div class="conf-outer">
-            <div>
-                <input type="checkbox" class="conf" name="episode-bookmark" />
-                <label>Custom bookmarks for episodes</label>
-            </div>
-            <div>
-                <input type="checkbox" class="conf" name="season-number" />
-                <label>Episode number based on season</label>
-            </div>
-            <div>
-                <input type="checkbox" class="conf" name="highest-resolution" />
-                <label>Automatically select highest resolution?</label>
-            </div>
+        <div class="page p-debug" style="display: none">
+            <div class="separator">Debug</div>
+            <button class="debug" id="clear">Clear storage</button>
+            <pre id="debug-console">...</pre>
         </div>
 
-        <pre id="debug-console" style="display: none;">...</pre>
-        <a class="homepage" href="https://github.com/Cyan903/Animepahe-plus">github.com/Cyan903/Animepahe-plus</a>
+        <div class="page-buttons">
+            <button class="page-button page-active" id="p-settings">
+                Settings
+            </button>
+            <button class="page-button" id="p-saved">Saved</button>
+            <button class="page-button" id="p-debug">Debug</button>
+        </div>
+
+        <a class="homepage" href="https://github.com/Cyan903/Animepahe-plus"
+            >github.com/Cyan903/Animepahe-plus</a
+        >
     </body>
 </html>

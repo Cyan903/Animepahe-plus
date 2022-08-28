@@ -7,28 +7,56 @@ const endpoints = {
 };
 
 const conf = {
-    "anilist-score": false,
-    "blur-cover": false,
-    "show-upcoming": false,
+    settings: {
+        // info
+        "anilist-score": false,
+        "blur-cover": false,
+        "show-upcoming": false,
 
-    "episode-bookmark": false,
-    "season-number": false,
-    "highest-resolution": false,
+        // watch
+        "episode-bookmark": false,
+        "season-number": false,
+        "highest-resolution": false,
+        "save-episode": false,
 
-    "random-anime": false,
-    "fakesite-ignore": false,
+        // general
+        "random-anime": false,
+        "fakesite-ignore": false,
+    },
+
+    // saved episodes
+    saved: [],
 };
+
+// ensure sync.saved is stored throughout tabs
+browser.storage.sync.onChanged.addListener((data) => {
+    if (document.hidden) {
+        location.reload();
+    }
+});
 
 (async () => {
     // load storage
-    for (const o of Object.keys(conf)) {
-        conf[o] = !!(await browser.storage.sync.get(o))[o];
+    const settings = await browser.storage.sync.get("settings");
+    for (const o of Object.keys(conf.settings)) {
+        if (
+            Object.keys(settings).length != 0 &&
+            typeof conf.settings[o] == "boolean"
+        ) {
+            conf.settings[o] = settings.settings[o];
+        }
+    }
+
+    // load save
+    const save = await browser.storage.sync.get("saved");
+    if (Object.keys(save).length != 0) {
+        conf.saved = save.saved.slice();
     }
 
     // execute functions
     for (const func of Object.keys(pahe)) {
         try {
-            if (conf[func]) await pahe[func]();
+            if (conf.settings[func]) await pahe[func]();
         } catch (e) {
             console.warn(`[pahe-plus] internal error ${e}`);
         }

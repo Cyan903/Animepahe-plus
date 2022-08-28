@@ -1,0 +1,41 @@
+.conf-outer {
+    margin-bottom: 1em;
+}
+
+.saved-items h4 {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.saved-items a {
+    color: #eee;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: normal !important;
+}
+
+.saved-items {
+    max-height: 250px;
+    overflow-y: scroll;
+    font-weight: bolder;
+}
+
+.saved-items a:hover {
+    color: #d5015b;
+}
+
+.saved-remove {
+    float: right;
+    position: relative;
+    right: 20px;
+    background-color: transparent;
+    color: #d5015b;
+    border: none;
+    width: 20px;
+    font-weight: bolder;
+}
+
+.saved-remove:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

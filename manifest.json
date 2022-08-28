@@ -31,7 +31,7 @@
                 "*://*.animepahe.ru/*"
             ],
 
-            "run_at": "document_idle",
+            "run_at": "document_end",
             "css": ["style/main.css"],
             "js": [
                 "pages/index.js",
@@ -47,7 +47,7 @@
                 "*://*.animepahe.ru/anime/*"
             ],
 
-            "run_at": "document_idle",
+            "run_at": "document_end",
             "css": ["style/pages/info.css"],
             "js": [
                 "pages/info/blur.js",
@@ -63,12 +63,13 @@
                 "*://*.animepahe.ru/play/*"
             ],
 
-            "run_at": "document_idle",
+            "run_at": "document_end",
             "css": ["style/pages/watch.css"],
             "js": [
                 "pages/watch/number.js",
                 "pages/watch/bookmark.js",
-                "pages/watch/resolution.js"
+                "pages/watch/resolution.js",
+                "pages/watch/saved.js"
             ]
         },
 
@@ -79,7 +80,7 @@
                 "*://*.animepahe.ru/b/*"
             ],
 
-            "run_at": "document_idle",
+            "run_at": "document_end",
             "js": ["pages/bookmark/_.js"]
         }
     ],

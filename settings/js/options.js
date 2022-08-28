@@ -1,35 +1,56 @@
 const conf = document.querySelectorAll(".conf");
 const config = {
-    "anilist-score": false,
-    "blur-cover": false,
-    "show-upcoming": false,
+    settings: {
+        // info
+        "anilist-score": false,
+        "blur-cover": false,
+        "show-upcoming": false,
 
-    "episode-bookmark": false,
-    "season-number": false,
-    "highest-resolution": false,
+        // watch
+        "episode-bookmark": false,
+        "season-number": false,
+        "highest-resolution": false,
+        "save-episode": false,
 
-    "random-anime": false,
-    "fakesite-ignore": false,
+        // general
+        "random-anime": false,
+        "fakesite-ignore": false,
+    },
+
+    // saved episodes
+    saved: [],
 };
 
 conf.forEach((elm) => {
     elm.addEventListener("change", async function () {
-        config[this.name] = !config[this.name];
+        config.settings[this.name] = !config.settings[this.name];
 
         browser.storage.sync.set(config);
-        browser.tabs.reload(); // TODO: this will break with options_ui
+        browser.tabs.reload({ bypassCache: true }); // TODO: this will break with options_ui
         await respond();
     });
 });
 
 async function respond() {
-    for (const o of Object.keys(config)) {
-        const stored = await browser.storage.sync.get(o);
+    const db = await browser.storage.sync.get("settings");
+    const save = await browser.storage.sync.get("saved");
+
+    // load settings
+    for (const o of Object.keys(config.settings)) {
+        const stored = JSON.parse(JSON.stringify(db))?.settings;
 
         // assign to config
-        config[o] = !!stored[o];
-        document.querySelector(`input[name="${o}"]`).checked = config[o];
+        config.settings[o] = Object.keys(db).length == 0 ? false : !!stored[o];
+        document.querySelector(`input[name="${o}"]`).checked =
+            config.settings[o];
     }
+
+    // load save
+    if (Object.keys(save).length != 0) {
+        config.saved = save.saved.slice();
+    }
+
+    initSave();
 
     document.getElementById("debug-console").innerHTML = JSON.stringify(
         config,

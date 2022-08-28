@@ -20,11 +20,11 @@
 ### Debug
 
 -   [ ] Wipe all local data (cookie, localStorage)
--   [ ] Reset settings to default
+-   [x] Reset settings to default
 
 ---
 
 ### Unsure
 
--   [ ] Watch history - wouldn't be very useful because of episode bookmarks
+-   [x] Watch history - wouldn't be very useful because of episode bookmarks
 -   [ ] Filter input search bar - sitewide search already exists (?)
