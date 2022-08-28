@@ -17,6 +17,7 @@ const conf = {
         "episode-bookmark": false,
         "season-number": false,
         "highest-resolution": false,
+        "save-episode": false,
 
         // general
         "random-anime": false,
@@ -27,14 +28,29 @@ const conf = {
     saved: [],
 };
 
+// ensure sync.saved is stored throughout tabs
+browser.storage.sync.onChanged.addListener((data) => {
+    if (document.hidden) {
+        location.reload();
+    }
+});
+
 (async () => {
     // load storage
     const settings = await browser.storage.sync.get("settings");
-
     for (const o of Object.keys(conf.settings)) {
-        if (Object.keys(settings).length != 0) {
+        if (
+            Object.keys(settings).length != 0 &&
+            typeof conf.settings[o] == "boolean"
+        ) {
             conf.settings[o] = settings.settings[o];
         }
+    }
+
+    // load save
+    const save = await browser.storage.sync.get("saved");
+    if (Object.keys(save).length != 0) {
+        conf.saved = save.saved.slice();
     }
 
     // execute functions

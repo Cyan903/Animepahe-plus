@@ -10,6 +10,7 @@ const config = {
         "episode-bookmark": false,
         "season-number": false,
         "highest-resolution": false,
+        "save-episode": false,
 
         // general
         "random-anime": false,
@@ -32,7 +33,9 @@ conf.forEach((elm) => {
 
 async function respond() {
     const db = await browser.storage.sync.get("settings");
+    const save = await browser.storage.sync.get("saved");
 
+    // load settings
     for (const o of Object.keys(config.settings)) {
         const stored = JSON.parse(JSON.stringify(db))?.settings;
 
@@ -41,6 +44,13 @@ async function respond() {
         document.querySelector(`input[name="${o}"]`).checked =
             config.settings[o];
     }
+
+    // load save
+    if (Object.keys(save).length != 0) {
+        config.saved = save.saved.slice();
+    }
+
+    initSave();
 
     document.getElementById("debug-console").innerHTML = JSON.stringify(
         config,

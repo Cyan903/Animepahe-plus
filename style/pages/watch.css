@@ -2,6 +2,7 @@
     float: right;
     position: relative;
     transform: translateY(-50px);
+    margin-left: 10px;
 }
 
 .pmax {
@@ -41,4 +42,46 @@
 
 .player-button-inner:hover {
     opacity: 0.9;
+}
+
+#save-episode {
+    background-color: #fff;
+    border-color: #fff;
+    color: transparent !important;
+    font-size: 0.9em;
+}
+
+#save-episode:hover {
+    opacity: 0.8;
+}
+
+#save-episode:active {
+    opacity: 0.3;
+}
+
+.save-active,
+.remove-active {
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.save-active {
+    animation-name: smoothintro;
+}
+
+.remove-active {
+    animation-name: smoothoutro;
+}
+
+/* prettier-ignore */
+@keyframes smoothintro {
+    0% { top: 3px; }
+    100% { top: 0px; }
+}
+
+/* prettier-ignore */
+@keyframes smoothoutro {
+    0% { top: 3px; }
+    100% { top: 0px; }
 }

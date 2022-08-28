@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: "Segoe UI", Arial, sans-serif;
     max-width: 500px;
+    max-height: 450px;
     padding: 1em;
 }
 

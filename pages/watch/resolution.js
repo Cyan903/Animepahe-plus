@@ -1,8 +1,8 @@
 // resolution.js
 //   highest-resolution
 //
-//  Automatically select the highest resolution. Will prefer sub over dub unless
-//  prefer-dub is enabled.
+//  Automatically select the highest resolution. Will prefer
+//  sub over dub.
 //
 
 function getHighestSub() {
