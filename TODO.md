@@ -7,7 +7,7 @@
 ### /play/\*
 
 -   [x] Show actual episode number
--   [ ] Toggle lights
+-   [x] Toggle lights
 -   [x] Select highest quality by default (sub only)
 -   [x] Custom bookmark for episodes
 
@@ -15,7 +15,6 @@
 
 -   [x] Disable "Beware of fake websites"
 -   [x] Random anime button
--   [ ] Turn logo into huge disable toggle
 
 ### Debug
 

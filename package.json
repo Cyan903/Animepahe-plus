@@ -4,7 +4,7 @@
     "description": "Additional features for animepahe.",
     "scripts": {
         "start": "web-ext run",
-        "build": "web-ext build",
+        "build": "web-ext build --overwrite-dest",
         "pretty": "prettier . --write"
     },
     "author": "Cyan903",
