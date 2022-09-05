@@ -21,7 +21,7 @@
 
 -   [x] Wipe all local data (cookie, localStorage)
 -   [x] Reset settings to default
--   [ ] Hard page reload
+-   [x] Hard page reload
 
 ---
 

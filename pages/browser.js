@@ -3,7 +3,7 @@
 //   browser functions
 //
 
-let tabCheck;
+let tabCheck = true;
 
 window.onfocus = () => (tabCheck = true);
 window.onblur = () => (tabCheck = false);
