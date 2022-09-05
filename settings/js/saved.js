@@ -31,6 +31,8 @@ function initSave() {
         return;
     }
 
+    saveList.innerHTML = null;
+
     for (const obj of config.saved) {
         saveList.insertAdjacentHTML(
             "afterbegin",

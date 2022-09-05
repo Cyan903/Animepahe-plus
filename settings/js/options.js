@@ -29,7 +29,7 @@ conf.forEach((elm) => {
         browser.storage.sync.set(config);
         browser.tabs.reload({ bypassCache: true });
 
-        location.reload();
+        respond();
     });
 });
 

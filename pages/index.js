@@ -1,7 +1,7 @@
 // index.js
 //   The main entry point for all scripts.
 //   Loads storage and calls related functions.
-// 
+//
 
 const pahe = {};
 const endpoints = {
