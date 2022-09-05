@@ -22,8 +22,7 @@ async function removeSaved() {
 
     saveList.innerHTML = null;
     browser.tabs.reload({ bypassCache: true });
-
-    await respond();
+    respond();
 }
 
 function initSave() {
