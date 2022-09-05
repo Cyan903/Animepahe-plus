@@ -25,9 +25,27 @@ async function removeSaved() {
     respond();
 }
 
+async function purgeSaved() {
+    if (confirm("Are you sure?")) {
+        config.saved = [];
+
+        await browser.storage.sync.set({
+            saved: [],
+        });
+
+        saveList.innerHTML = null;
+        browser.tabs.reload({ bypassCache: true });
+        respond();
+    }
+}
+
 function initSave() {
     if (config.saved.length == 0) {
         saveList.innerHTML = "<h4>Nothing saved yet...</h4>";
+        document.getElementById("purgeSaved").addEventListener("click", () => {
+            alert("Nothing to purge!");
+        });
+
         return;
     }
 
@@ -50,4 +68,6 @@ function initSave() {
     document.querySelectorAll(".saved-remove").forEach((elm) => {
         elm.addEventListener("click", removeSaved);
     });
+
+    document.getElementById("purgeSaved").addEventListener("click", purgeSaved);
 }
