@@ -1,6 +1,6 @@
 # Animepahe-plus <img src="https://raw.githubusercontent.com/Cyan903/Animepahe-plus/main/img/logo-circle.png" align="right" width="150" />
 
-![last-commit](https://img.shields.io/github/last-commit/cyan903/animepahe-plus) ![permissions](https://img.shields.io/github/manifest-json/permissions/cyan903/Animepahe-plus) ![downloads](https://img.shields.io/amo/dw/animepahe-plus)
+![permissions](https://img.shields.io/github/manifest-json/v/Cyan903/animepahe-plus) ![last-commit](https://img.shields.io/github/last-commit/cyan903/animepahe-plus) ![users](https://img.shields.io/amo/users/animepahe-plus)
 
 Browser extension for adding additional features to `animepahe`. Available for download on the [Firefox addon store](https://addons.mozilla.org/en-CA/firefox/addon/animepahe-plus/) with support for all `animepahe` domains.
 

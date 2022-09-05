@@ -15,7 +15,7 @@
 
 -   [x] Disable "Beware of fake websites"
 -   [x] Random anime button
--   [ ] Clear saved
+-   [x] Clear saved
 
 ### Debug
 
