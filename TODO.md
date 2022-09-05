@@ -15,11 +15,13 @@
 
 -   [x] Disable "Beware of fake websites"
 -   [x] Random anime button
+-   [ ] Clear saved
 
 ### Debug
 
 -   [x] Wipe all local data (cookie, localStorage)
 -   [x] Reset settings to default
+-   [ ] Hard page reload
 
 ---
 
