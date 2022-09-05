@@ -39,3 +39,14 @@
 .saved-remove:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
+
+#purgeSaved {
+    background-color: transparent;
+    border: none;
+    color: #eee;
+    opacity: 0.5;
+}
+
+#purgeSaved:hover {
+    opacity: 1;
+}

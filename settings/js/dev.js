@@ -1,6 +1,7 @@
 const clear = document.getElementById("clear");
 const cookieMonster = document.getElementById("cookieMonster");
 const syncStorage = document.getElementById("viewStorage");
+const hardReload = document.getElementById("hardReload");
 
 function clearStorage() {
     if (confirm("Are you sure?")) {
@@ -33,6 +34,14 @@ function viewStorage() {
             : "View sync storage";
 }
 
+function forceReload() {
+    if (confirm("Are you sure?")) {
+        browser.tabs.reload({ bypassCache: true });
+        location.reload();
+    }
+}
+
 clear.addEventListener("click", clearStorage);
 cookieMonster.addEventListener("click", takeABite);
 syncStorage.addEventListener("click", viewStorage);
+hardReload.addEventListener("click", forceReload);
