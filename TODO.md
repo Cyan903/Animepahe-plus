@@ -16,6 +16,7 @@
 -   [x] Disable "Beware of fake websites"
 -   [x] Random anime button
 -   [x] Clear saved
+-   [x] Watch history
 
 ### Debug
 
@@ -23,9 +24,3 @@
 -   [x] Reset settings to default
 -   [x] Hard page reload
 
----
-
-### Unsure
-
--   [x] Watch history - wouldn't be very useful because of episode bookmarks
--   [ ] Filter input search bar - sitewide search already exists (?)
