@@ -5,15 +5,15 @@ const hardReload = document.getElementById("hardReload");
 
 function clearStorage() {
     if (confirm("Are you sure?")) {
-        browser.storage.sync.clear();
-        browser.tabs.reload({ bypassCache: true });
+        chrome.storage.sync.clear();
+        chrome.tabs.reload({ bypassCache: true });
         location.reload();
     }
 }
 
 // prettier-ignore
 function takeABite() {
-    browser.tabs.executeScript({ code: `
+    chrome.tabs.executeScript({ code: `
         (() => {
             alert("Removing all data...");
             localStorage.clear();
@@ -36,7 +36,7 @@ function viewStorage() {
 
 function forceReload() {
     if (confirm("Are you sure?")) {
-        browser.tabs.reload({ bypassCache: true });
+        chrome.tabs.reload({ bypassCache: true });
         location.reload();
     }
 }

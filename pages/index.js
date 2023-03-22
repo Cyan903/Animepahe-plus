@@ -34,7 +34,7 @@ const conf = {
 
 (async () => {
     // load storage
-    const settings = await browser.storage.sync.get("settings");
+    const settings = await chrome.storage.sync.get(["settings"]);
     for (const o of Object.keys(conf.settings)) {
         if (
             Object.keys(settings).length != 0 &&
@@ -45,7 +45,7 @@ const conf = {
     }
 
     // load save
-    const save = await browser.storage.sync.get("saved");
+    const save = await chrome.storage.sync.get(["saved"]);
     if (Object.keys(save).length != 0) {
         conf.saved = save.saved.slice();
     }

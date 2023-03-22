@@ -16,12 +16,12 @@ async function removeSaved() {
         (i) => i.name != this.parentElement.children[0].title
     );
 
-    await browser.storage.sync.set({
+    await chrome.storage.sync.set({
         saved: config.saved.slice(),
     });
 
     saveList.innerHTML = null;
-    browser.tabs.reload({ bypassCache: true });
+    chrome.tabs.reload({ bypassCache: true });
     respond();
 }
 
@@ -29,12 +29,12 @@ async function purgeSaved() {
     if (confirm("Are you sure?")) {
         config.saved = [];
 
-        await browser.storage.sync.set({
+        await chrome.storage.sync.set({
             saved: [],
         });
 
         saveList.innerHTML = null;
-        browser.tabs.reload({ bypassCache: true });
+        chrome.tabs.reload({ bypassCache: true });
         respond();
     }
 }

@@ -26,16 +26,16 @@ conf.forEach((elm) => {
     elm.addEventListener("change", async function () {
         config.settings[this.name] = !config.settings[this.name];
 
-        browser.storage.sync.set(config);
-        browser.tabs.reload({ bypassCache: true });
+        chrome.storage.sync.set(config);
+        chrome.tabs.reload({ bypassCache: true });
 
         respond();
     });
 });
 
 async function respond() {
-    const db = await browser.storage.sync.get("settings");
-    const save = await browser.storage.sync.get("saved");
+    const db = await chrome.storage.sync.get(["settings"]);
+    const save = await chrome.storage.sync.get(["saved"]);
 
     // load settings
     for (const o of Object.keys(config.settings)) {
