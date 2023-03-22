@@ -43,6 +43,17 @@
 
         {
             "matches": [
+                "*://*.animepahe.com/",
+                "*://*.animepahe.org/",
+                "*://*.animepahe.ru/"
+            ],
+
+            "run_at": "document_end",
+            "js": ["pages/info/blur.js"]
+        },
+
+        {
+            "matches": [
                 "*://*.animepahe.com/anime/*",
                 "*://*.animepahe.org/anime/*",
                 "*://*.animepahe.ru/anime/*"
