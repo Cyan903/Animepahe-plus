@@ -1,6 +1,6 @@
 {
     "description": "Additional features for animepahe.",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Animepahe Plus",
     "version": "1.1.1",
     "homepage_url": "https://github.com/Cyan903/Animepahe-plus",
@@ -8,19 +8,40 @@
         "48": "icons/dark-48.png"
     },
 
-    "permissions": ["activeTab", "storage", "*://graphql.anilist.co/*"],
+    "permissions": ["activeTab", "storage"],
 
-    "browser_action": {
+    "action": {
         "default_icon": "icons/dark-32.png",
         "default_title": "Animepahe+",
         "default_popup": "settings/conf.html"
     },
 
     "web_accessible_resources": [
-        "style/pages/*.css",
-        "style/main.css",
-        "img/*.svg",
-        "img/*.png"
+        {
+            "resources": [
+                "style/pages/dev.css",
+                "style/pages/page.css",
+                "style/pages/popup.css",
+                "style/pages/separator.css",
+                "style/pages/settings.css",
+                "style/main.css",
+                
+                "img/add.svg",
+                "img/bookmark.svg",
+                "img/light-bulb.svg",
+                "img/logo-big.png",
+                "img/logo-circle.png",
+                "img/remove.png"
+            ],
+
+            "matches": [
+                "*://*.animepahe.com/*",
+                "*://*.animepahe.org/*",
+                "*://*.animepahe.ru/*"
+            ],
+
+            "use_dynamic_url": true
+        }
     ],
 
     "content_scripts": [
@@ -101,12 +122,5 @@
     "options_ui": {
         "page": "settings/conf.html",
         "open_in_tab": true
-    },
-
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "pahe-plus@hwk",
-            "strict_min_version": "57.0a1"
-        }
     }
 }
