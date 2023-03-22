@@ -30,7 +30,7 @@ async function savedToggle(_this, title, url) {
     if (!isSaved(title)) {
         await saveItem(title, url);
         // prettier-ignore
-        _this.style = `mask: url(${chrome.runtime.getURL("img/remove.svg")}) no-repeat center;`;
+        _this.style = `-webkit-mask: url(${chrome.runtime.getURL("img/remove.svg")}) no-repeat center;`;
         _this.classList.add("save-active");
         _this.classList.remove("remove-active");
 
@@ -42,7 +42,7 @@ async function savedToggle(_this, title, url) {
     _this.classList.add("remove-active");
 
     // prettier-ignore
-    _this.style = `mask: url(${chrome.runtime.getURL("img/add.svg")}) no-repeat center;`;
+    _this.style = `-webkit-mask: url(${chrome.runtime.getURL("img/add.svg")}) no-repeat center;`;
 }
 
 function saveButton(title) {
@@ -54,7 +54,7 @@ function saveButton(title) {
     info.insertAdjacentHTML("beforeend", `
         <button 
             class="player-button" id="save-episode"
-            style="mask: url(${chrome.runtime.getURL(icon)}) no-repeat center;"
+            style="-webkit-mask: url(${chrome.runtime.getURL(icon)}) no-repeat center;"
         >x</button>
     `);
 

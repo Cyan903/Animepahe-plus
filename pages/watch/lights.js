@@ -57,7 +57,7 @@ function insertLight() {
     info.insertAdjacentHTML("beforeend", `
         <button 
             class="player-button" id="toggle-lights"
-            style="mask: url(${chrome.runtime.getURL("img/light-bulb.svg")}) no-repeat center; background-color: #6d6e2b;"
+            style="-webkit-mask: url(${chrome.runtime.getURL("img/light-bulb.svg")}) no-repeat center; background-color: #6d6e2b;"
         >x</button>
     `);
 

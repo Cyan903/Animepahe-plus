@@ -25,13 +25,14 @@
                 "style/pages/separator.css",
                 "style/pages/settings.css",
                 "style/main.css",
-                
+
                 "img/add.svg",
+                "img/remove.svg",
                 "img/bookmark.svg",
+                
                 "img/light-bulb.svg",
                 "img/logo-big.png",
-                "img/logo-circle.png",
-                "img/remove.png"
+                "img/logo-circle.png"
             ],
 
             "matches": [

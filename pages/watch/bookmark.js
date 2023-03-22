@@ -85,7 +85,7 @@ function insertBookmark() {
     // prettier-ignore
     info.insertAdjacentHTML("beforeend", `
         <div class="player-button pmax">
-            <button class="player-button-inner" id="ppahe-bookmark" style="mask: url(${chrome.runtime.getURL("img/bookmark.svg")}) no-repeat center;"></button>
+            <button class="player-button-inner" id="ppahe-bookmark" style="-webkit-mask: url(${chrome.runtime.getURL("img/bookmark.svg")}) no-repeat center;"></button>
             <div id="player-bookmark-popout" style="display: none;">
                 <a id="bookmark-href"></a>
                 <div id="bookmark-how">Loading...</div>
