@@ -1,14 +1,8 @@
 # Animepahe-plus <img src="https://raw.githubusercontent.com/Cyan903/Animepahe-plus/main/img/logo-circle.png" align="right" width="150" />
 
-![permissions](https://img.shields.io/github/manifest-json/v/Cyan903/animepahe-plus) ![last-commit](https://img.shields.io/github/last-commit/cyan903/animepahe-plus) ![users](https://img.shields.io/amo/users/animepahe-plus)
+![last-commit](https://img.shields.io/github/last-commit/cyan903/animepahe-plus)
 
-Browser extension for adding additional features to `animepahe`. Available for download on the [Firefox addon store](https://addons.mozilla.org/en-CA/firefox/addon/animepahe-plus/) with support for all `animepahe` domains.
-
-```sh
-$ npm start # test
-$ npm run build # build
-$ npm run pretty # clean
-```
+Browser extension for adding additional features to `animepahe` with support for all `animepahe` domains. This branch is a rewrite of the original branch to support Chrome v3 manifest.
 
 ## Features
 

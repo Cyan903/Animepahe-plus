@@ -2,9 +2,6 @@
 /node_modules
 package-lock.json
 
-# build
-/web-ext-artifacts
-
 # misc
 todo
 notes
