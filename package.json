@@ -10,7 +10,7 @@
     "author": "Cyan903",
     "license": "MIT",
     "devDependencies": {
-        "prettier": "^2.7.1",
-        "web-ext": "^7.6.0"
+        "prettier": "^3.1.0",
+        "web-ext": "^7.9.0"
     }
 }
