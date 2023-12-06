@@ -1,3 +1,8 @@
+// dev.js
+//  The debug tab. Can be used to reset
+//  the internal storage.
+//
+
 const clear = document.getElementById("clear");
 const cookieMonster = document.getElementById("cookieMonster");
 const syncStorage = document.getElementById("viewStorage");
@@ -28,10 +33,10 @@ function viewStorage() {
 
     dc.style.visibility =
         dc.style.visibility == "visible" ? "hidden" : "visible";
-    this.innerText =
+    syncStorage.innerText =
         dc.style.visibility == "visible"
             ? "Hide sync storage"
-            : "View sync storage";
+            : "Show sync storage";
 }
 
 function forceReload() {

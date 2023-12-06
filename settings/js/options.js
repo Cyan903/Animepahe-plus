@@ -1,3 +1,8 @@
+// options.js
+//  Manages the storage and configuration.
+//  Keeps storage synced with other tabs/windows.
+//
+
 const conf = document.querySelectorAll(".conf");
 const config = {
     settings: {

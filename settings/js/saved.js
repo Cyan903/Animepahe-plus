@@ -1,3 +1,7 @@
+// saved.js
+//  Manage saved links and update storage.
+//
+
 const saveList = document.querySelector(".saved-items");
 
 const clean = (s) => {
