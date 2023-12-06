@@ -8,7 +8,7 @@
 async function getAnimeList() {
     const req = await fetch(`https://${location.hostname}/anime`)
         .then((t) => t.text())
-        .catch((e) => {
+        .catch(() => {
             console.warn("[pahe-plus] could not fetch anime list!");
         });
 

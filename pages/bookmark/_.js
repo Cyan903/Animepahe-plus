@@ -27,7 +27,7 @@ async function getAnimeID(id) {
     const cid = await fetch(`https://${location.hostname}/a/${id}`).catch(
         (e) => {
             console.warn("[pahe-plus]", e);
-        }
+        },
     );
 
     if (!cid || cid.status != 200 || !cid.url.includes("/anime/")) {
@@ -54,7 +54,7 @@ async function redirect(url) {
     if (!id) return false;
 
     const req = await fetch(
-        `https://${location.hostname}/api?m=release&id=${id}&sort=episode_asc&page=${json.page}`
+        `https://${location.hostname}/api?m=release&id=${id}&sort=episode_asc&page=${json.page}`,
     )
         .then((j) => j.json())
         .catch((e) => {

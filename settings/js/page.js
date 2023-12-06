@@ -1,3 +1,7 @@
+// page.js
+//  Manages tabs for the popup UI.
+//
+
 const page = document.querySelectorAll(".page");
 const buttons = document.querySelectorAll(".page-button");
 

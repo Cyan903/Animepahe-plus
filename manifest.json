@@ -2,13 +2,18 @@
     "description": "Additional features for animepahe.",
     "manifest_version": 2,
     "name": "Animepahe Plus",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "homepage_url": "https://github.com/Cyan903/Animepahe-plus",
     "icons": {
         "48": "icons/dark-48.png"
     },
 
-    "permissions": ["activeTab", "storage", "*://graphql.anilist.co/*"],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "*://graphql.anilist.co/*",
+        "*://pahe.win/*"
+    ],
 
     "browser_action": {
         "default_icon": "icons/dark-32.png",
@@ -82,7 +87,8 @@
                 "pages/watch/bookmark.js",
                 "pages/watch/resolution.js",
                 "pages/watch/lights.js",
-                "pages/watch/saved.js"
+                "pages/watch/saved.js",
+                "pages/watch/direct.js"
             ]
         },
 

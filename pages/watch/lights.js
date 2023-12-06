@@ -69,7 +69,6 @@ function insertLight() {
 function lights() {
     if (!insertLight()) {
         console.warn("[pahe-plus] could not insert light button!");
-        return;
     }
 }
 

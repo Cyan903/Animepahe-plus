@@ -10,6 +10,7 @@
 -   [x] Toggle lights
 -   [x] Select highest quality by default (sub only)
 -   [x] Custom bookmark for episodes
+-   [x] Skip redirect for episode downloads
 
 ### General
 

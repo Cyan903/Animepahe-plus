@@ -1,3 +1,8 @@
+// options.js
+//  Manages the storage and configuration.
+//  Keeps storage synced with other tabs/windows.
+//
+
 const conf = document.querySelectorAll(".conf");
 const config = {
     settings: {
@@ -12,6 +17,7 @@ const config = {
         "highest-resolution": false,
         "save-episode": false,
         "toggle-lights": false,
+        "direct-links": false,
 
         // general
         "random-anime": false,
@@ -57,7 +63,7 @@ async function respond() {
     document.getElementById("debug-console").innerHTML = JSON.stringify(
         config,
         null,
-        4
+        4,
     );
 }
 

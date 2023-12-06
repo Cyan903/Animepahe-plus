@@ -5,9 +5,9 @@
 Browser extension for adding additional features to `animepahe`. Available for download on the [Firefox addon store](https://addons.mozilla.org/en-CA/firefox/addon/animepahe-plus/) with support for all `animepahe` domains.
 
 ```sh
-$ npm start # test
+$ npm dev # test
 $ npm run build # build
-$ npm run pretty # clean
+$ npm run format # clean
 ```
 
 ## Features
