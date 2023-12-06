@@ -74,6 +74,14 @@
     animation-name: smoothoutro;
 }
 
+.direct-link-item {
+    color: #d5015b;
+}
+
+#pickDownload a:hover .direct-link-item {
+    color: #fff;
+}
+
 /* prettier-ignore */
 @keyframes smoothintro {
     0% { top: 3px; }

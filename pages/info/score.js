@@ -54,7 +54,7 @@ function userScores({ averageScore, popularity }) {
         <h2 id="anilist-userscores">${averageScore}% | ${popularity
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} users</h2>
-    `
+    `,
     );
 }
 

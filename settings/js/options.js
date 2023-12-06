@@ -12,6 +12,7 @@ const config = {
         "highest-resolution": false,
         "save-episode": false,
         "toggle-lights": false,
+        "direct-links": false,
 
         // general
         "random-anime": false,
@@ -57,7 +58,7 @@ async function respond() {
     document.getElementById("debug-console").innerHTML = JSON.stringify(
         config,
         null,
-        4
+        4,
     );
 }
 

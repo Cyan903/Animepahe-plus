@@ -1,0 +1,71 @@
+// direct.js
+//   direct-links
+//
+//  Skip pahe.win redirect when downloading
+//  episodes.
+//
+
+async function getDirectDonwload(e) {
+    e.preventDefault();
+
+    // Get URL
+    const dl = e.target.href;
+
+    if (!dl) {
+        console.warn("[pahe-plus] could not find url.");
+        return;
+    }
+
+    const req = await fetch(dl)
+        .then((t) => t.text())
+        .catch(() => {
+            console.warn(`[pahe-plus] could not fetch ${dl}!`);
+        });
+
+    if (!req) return;
+
+    // Find location
+    try {
+        const parser = new DOMParser(req);
+        const vdom = parser.parseFromString(req, "text/html");
+        const vid = vdom.querySelector(".redirect");
+
+        if (vid?.href) {
+            window.open(vid.href, "_blank");
+            return;
+        }
+
+        throw new Error("Video not found.");
+    } catch (e) {
+        console.warn("[pahe-plus] error parsing direct download.");
+        console.error(e);
+    }
+}
+
+function insertDownloads() {
+    const options = document.querySelectorAll("#pickDownload a");
+
+    if (!options || !options.length) {
+        return false;
+    }
+
+    options.forEach((elm) => {
+        elm.insertAdjacentHTML(
+            "beforeend",
+            `<span class="direct-link-item"> (Direct) </span>`,
+        );
+
+        elm.onclick = getDirectDonwload;
+        elm.target = "";
+    });
+
+    return true;
+}
+
+function direct() {
+    if (!insertDownloads()) {
+        console.warn("[pahe-plus] could not get insert direct download links!");
+    }
+}
+
+pahe["direct-links"] = direct;

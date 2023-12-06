@@ -88,7 +88,7 @@ async function episode() {
         !Number.isInteger(status.episode)
     ) {
         console.warn(
-            "[pahe-plus] error fetching airing status, anime is likely finished airing."
+            "[pahe-plus] error fetching airing status, anime is likely finished airing.",
         );
 
         return;

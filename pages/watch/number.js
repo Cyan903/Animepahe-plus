@@ -16,7 +16,7 @@ function seriesID() {
 
 async function getEpisode(id) {
     const req = await fetch(
-        `${endpoints.api}?m=release&id=${id}&sort=episode_asc&page=1`
+        `${endpoints.api}?m=release&id=${id}&sort=episode_asc&page=1`,
     )
         .then((j) => j.json())
         .catch((e) => {
@@ -33,7 +33,7 @@ function thisEpisode() {
         return parseInt(
             document
                 .getElementById("episodeMenu")
-                .innerText.replace("Episode ", "")
+                .innerText.replace("Episode ", ""),
         );
     } catch (e) {
         console.warn("[pahe-plus]", e);

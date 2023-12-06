@@ -22,6 +22,7 @@ const conf = {
         "highest-resolution": false,
         "save-episode": false,
         "toggle-lights": false,
+        "direct-links": false,
 
         // general
         "random-anime": false,

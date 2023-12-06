@@ -69,7 +69,7 @@ function saveButton(title) {
         const mark = `https://${location.hostname}/b/${buildBookmark(
             static.anime_id,
             static.episode,
-            static.page
+            static.page,
         )}`;
 
         await savedToggle(this, title, mark);
@@ -83,7 +83,6 @@ function saveEpisode() {
 
     if (!saveButton(title)) {
         console.warn("[pahe-plus] could not insert save button!");
-        return;
     }
 }
 

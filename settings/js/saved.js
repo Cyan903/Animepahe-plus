@@ -13,7 +13,7 @@ const shorten = (s) => {
 
 async function removeSaved() {
     config.saved = config.saved.filter(
-        (i) => i.name != this.parentElement.children[0].title
+        (i) => i.name != this.parentElement.children[0].title,
     );
 
     await browser.storage.sync.set({
@@ -57,11 +57,11 @@ function initSave() {
             `
             <li>
                 <a href="${obj.url}" title="${clean(obj.name)}">${shorten(
-                clean(obj.name)
-            )}</a>
+                    clean(obj.name),
+                )}</a>
                 <button class="saved-remove">X</button>
             </li>
-        `
+        `,
         );
     }
 

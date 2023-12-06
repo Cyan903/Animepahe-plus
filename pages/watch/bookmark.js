@@ -24,7 +24,7 @@ function buildBookmark(id, episode, page) {
             id,
             episode,
             page,
-        })
+        }),
     );
 }
 
@@ -33,13 +33,13 @@ async function getStaticIDs({ series, episode }) {
 
     do {
         const req = await fetch(
-            `${endpoints.api}?m=release&id=${series}&sort=episode_asc&page=${page}`
+            `${endpoints.api}?m=release&id=${series}&sort=episode_asc&page=${page}`,
         )
             .then((j) => j.json())
             .catch((e) => {
                 console.warn(
                     `[pahe-plus] could not fetch ${endpoints.api}!`,
-                    e
+                    e,
                 );
             });
 
@@ -70,7 +70,7 @@ async function promptBookmark(ids) {
     bookmarkHref.href = `/b/${buildBookmark(
         static.anime_id,
         static.episode,
-        static.page
+        static.page,
     )}`;
 
     return true;
@@ -133,7 +133,7 @@ function bookmark() {
     // don't insert if the url is invalid
     if (!insertBookmark()) {
         console.warn(
-            "[pahe-plus] could not find proper elements... possible 404?"
+            "[pahe-plus] could not find proper elements... possible 404?",
         );
     }
 }
