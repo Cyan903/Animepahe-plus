@@ -5,6 +5,22 @@
 //  episodes.
 //
 
+function getURLS(str, lower = false) {
+    const regexp =
+        /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()'@:%_\+.~#?!&//=]*)/gi;
+    const bracketsRegexp = /[()]/g;
+    const urls = str.match(regexp);
+
+    // https://github.com/huckbit/extract-urls
+    if (urls) {
+        return lower
+            ? urls.map((item) => item.toLowerCase().replace(bracketsRegexp, ""))
+            : urls.map((item) => item.replace(bracketsRegexp, ""));
+    }
+
+    return [];
+}
+
 async function getDirectDonwload(e) {
     e.preventDefault();
 
@@ -26,12 +42,11 @@ async function getDirectDonwload(e) {
 
     // Find location
     try {
-        const parser = new DOMParser(req);
-        const vdom = parser.parseFromString(req, "text/html");
-        const vid = vdom.querySelector(".redirect");
+        const urls = getURLS(req, true);
+        const dl = urls.filter((n) => n.includes("kwik.cx/"));
 
-        if (vid?.href) {
-            window.open(vid.href, "_blank");
+        if (dl.length > 0 && dl[0]) {
+            window.open(dl[0], "_blank");
             return;
         }
 
