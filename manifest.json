@@ -2,7 +2,7 @@
     "description": "Additional features for animepahe.",
     "manifest_version": 2,
     "name": "Animepahe Plus",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "homepage_url": "https://github.com/Cyan903/Animepahe-plus",
     "icons": {
         "48": "icons/dark-48.png"
