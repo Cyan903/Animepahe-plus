@@ -43,7 +43,7 @@ async function getDirectDonwload(e) {
     // Find location
     try {
         const urls = getURLS(req, true);
-        const dl = urls.filter((n) => n.includes("kwik.cx/"));
+        const dl = urls.filter((n) => n.includes("://kwik."));
 
         if (dl.length > 0 && dl[0]) {
             window.open(dl[0], "_blank");
