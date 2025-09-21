@@ -33,6 +33,7 @@
             "matches": [
                 "*://*.animepahe.com/*",
                 "*://*.animepahe.org/*",
+                "*://*.animepahe.si/*",
                 "*://*.animepahe.ru/*"
             ],
 
@@ -50,6 +51,7 @@
             "matches": [
                 "*://*.animepahe.com/",
                 "*://*.animepahe.org/",
+                "*://*.animepahe.si/*",
                 "*://*.animepahe.ru/"
             ],
 
@@ -61,6 +63,7 @@
             "matches": [
                 "*://*.animepahe.com/anime/*",
                 "*://*.animepahe.org/anime/*",
+                "*://*.animepahe.si/anime/*",
                 "*://*.animepahe.ru/anime/*"
             ],
 
@@ -77,6 +80,7 @@
             "matches": [
                 "*://*.animepahe.com/play/*",
                 "*://*.animepahe.org/play/*",
+                "*://*.animepahe.si/play/*",
                 "*://*.animepahe.ru/play/*"
             ],
 
@@ -96,6 +100,7 @@
             "matches": [
                 "*://*.animepahe.com/b/*",
                 "*://*.animepahe.org/b/*",
+                "*://*.animepahe.si/b/*",
                 "*://*.animepahe.ru/b/*"
             ],
 

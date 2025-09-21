@@ -29,6 +29,7 @@ async function deleteItem(name) {
 async function savedToggle(_this, title, url) {
     if (!isSaved(title)) {
         await saveItem(title, url);
+
         // prettier-ignore
         _this.style = `mask: url(${browser.runtime.getURL("img/remove.svg")}) no-repeat center;`;
         _this.classList.add("save-active");
