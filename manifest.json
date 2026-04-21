@@ -2,7 +2,7 @@
     "description": "Additional features for animepahe.",
     "manifest_version": 2,
     "name": "Animepahe Plus",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "homepage_url": "https://github.com/Cyan903/Animepahe-plus",
     "icons": {
         "48": "icons/dark-48.png"
@@ -34,7 +34,8 @@
                 "*://*.animepahe.com/*",
                 "*://*.animepahe.org/*",
                 "*://*.animepahe.si/*",
-                "*://*.animepahe.ru/*"
+                "*://*.animepahe.ru/*",
+                "*://*.animepahe.pw/*"
             ],
 
             "run_at": "document_end",
@@ -51,8 +52,9 @@
             "matches": [
                 "*://*.animepahe.com/",
                 "*://*.animepahe.org/",
-                "*://*.animepahe.si/*",
-                "*://*.animepahe.ru/"
+                "*://*.animepahe.si/",
+                "*://*.animepahe.ru/",
+                "*://*.animepahe.pw/"
             ],
 
             "run_at": "document_end",
@@ -64,7 +66,8 @@
                 "*://*.animepahe.com/anime/*",
                 "*://*.animepahe.org/anime/*",
                 "*://*.animepahe.si/anime/*",
-                "*://*.animepahe.ru/anime/*"
+                "*://*.animepahe.ru/anime/*",
+                "*://*.animepahe.pw/anime/*"
             ],
 
             "run_at": "document_end",
@@ -81,7 +84,8 @@
                 "*://*.animepahe.com/play/*",
                 "*://*.animepahe.org/play/*",
                 "*://*.animepahe.si/play/*",
-                "*://*.animepahe.ru/play/*"
+                "*://*.animepahe.ru/play/*",
+                "*://*.animepahe.pw/play/*"
             ],
 
             "run_at": "document_end",
@@ -101,7 +105,8 @@
                 "*://*.animepahe.com/b/*",
                 "*://*.animepahe.org/b/*",
                 "*://*.animepahe.si/b/*",
-                "*://*.animepahe.ru/b/*"
+                "*://*.animepahe.ru/b/*",
+                "*://*.animepahe.pw/b/*"
             ],
 
             "run_at": "document_end",
